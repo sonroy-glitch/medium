@@ -1,4 +1,4 @@
-import { useState ,Suspense} from 'react'
+import { useState ,Suspense,useEffect} from 'react'
 import './App.css'
 import Write from "./screens/Write.jsx"
 import Signin from "./screens/Signin.jsx"
@@ -14,7 +14,9 @@ import {Routes,Route} from "react-router-dom"
 function App() {
   const [count, setCount] = useState(0)
 
+ 
   return (
+   <div >
     <Suspense fallback={"loading...."}>
     <Routes>
       <Route path="/" element={<Home/>}/>
@@ -30,6 +32,7 @@ function App() {
       <Route path="*" element={<NotFound />} />
     </Routes>
     </Suspense>
+   </div>
   )
 }
 

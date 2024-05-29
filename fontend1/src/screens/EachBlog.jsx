@@ -20,7 +20,7 @@ const EachBlog = () => {
   const [holder,setHolder]=useRecoilState(blogsHolder)
   const [profile,setProfile]=useRecoilState(profileDiv)
   const name=useRecoilValue(userName)
-  const [bookmark,setBookmark]=useState(bookmarkfalse)
+  const [bookmarkIcon,setBookmarkIcon]=useState(bookmarkfalse)
   const [check,setCheck]=useState(false)//checks the email of the user to that of the token
   const navigate=useNavigate()
   const ref=useRef(null)
@@ -59,20 +59,29 @@ const EachBlog = () => {
     var bookmark=data.author.bookmarks
     bookmark.map((item)=>{
       if(item === data.id){
-        setBookmark(bookmarktrue)
+        setBookmarkIcon(bookmarktrue)
       }
     })
   }, [])
   
   async function bookmarkAdd(){
-    console.log(id)
-    var data = await axios.get("http://localhost:8787/user/api/bookmarks",{
-      headers:{
-        auth:token,
+    if(bookmarkIcon===bookmarkfalse){
+      var data = await axios.post("http://localhost:8787/user/api/bookmarks",{
+        id
+      },{
+        headers:{auth:token}
+      })
+      setBookmarkIcon(bookmarktrue) 
+    }
+    else if(bookmarkIcon===bookmarktrue){
+     var data = await axios.get("http://localhost:8787/user/api/bookmarks/delete",{
+      headers:{auth:token,
         id
       }
-    })
-    setBookmark(bookmarktrue) 
+     })
+     setBookmarkIcon(bookmarkfalse)
+    }
+   
   }
   function updatefn(){
     setUpdate(data);
@@ -147,7 +156,7 @@ const EachBlog = () => {
       
         <div  className="flex flex-row">
         <div onClick={bookmarkAdd} className="flex flex-row items-center justify-center mr-1 ">
-          <img  className="w-2 h-2"src ={bookmark}/>
+          <img  className="w-2 h-2"src ={bookmarkIcon}/>
         </div>
         {check? (
           <div className="flex flex-row">
