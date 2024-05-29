@@ -25,11 +25,15 @@ const EachBlog = () => {
   const navigate=useNavigate()
   const ref=useRef(null)
   const setUpdate=useSetRecoilState(updateHolder)
-  var data=blog
+  const [data,setData]=useState(JSON.parse(localStorage.getItem("blog")))
   const [claps,setClaps]=useState(data.claps)
+  const [render,setRender]=useState(false)
    var [id,setId ]=useState(data.id)
-  var arr =data.time.split("T")
   var token= localStorage.getItem("auth")
+  var arr =data.time.split("T")
+  
+  
+  
   useEffect(() => {
     async function call(){
       var data1 = await axios.get("https://medium.rsounak55.workers.dev/user/api/check",{
@@ -66,15 +70,16 @@ const EachBlog = () => {
   
   async function bookmarkAdd(){
     if(bookmarkIcon===bookmarkfalse){
-      var data = await axios.post("https://medium.rsounak55.workers.dev/api/bookmarks",{
+      var data = await axios.post("https://medium.rsounak55.workers.dev/user/api/bookmarks",{
         id
       },{
         headers:{auth:token}
       })
+      console.log(id)
       setBookmarkIcon(bookmarktrue) 
     }
     else if(bookmarkIcon===bookmarktrue){
-     var data = await axios.get("https://medium.rsounak55.workers.dev/bookmarks/delete",{
+     var data = await axios.get("https://medium.rsounak55.workers.dev/user/api/bookmarks/delete",{
       headers:{auth:token,
         id
       }
@@ -101,6 +106,7 @@ const EachBlog = () => {
   }
 
   return (
+    
     <div>
       <LoadingBar color="red" ref={ref}/>
           <ProfileContainer className="z-10 flex "/> 
@@ -182,6 +188,7 @@ const EachBlog = () => {
     </div>
     
   )
+
 }
 
 export default EachBlog

@@ -56,6 +56,7 @@ const Blogs = () => {
    function run (index){
     if(signedIn){
       setBlog(holder[index]);
+      localStorage.setItem("blog",JSON.stringify(holder[index]))
       navigate("/user/api/blog")
     }
     else{

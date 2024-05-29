@@ -25,6 +25,8 @@ const Bookmark = () => {
   const  [blog,setBlog]=useRecoilState(singleBlog)
   const ref=useRef(null)
   const [bookmark,setBookmark]=useRecoilState(bookmarkHolder)
+  
+  
   useEffect(() => {
    setProfile(false)
   }, [])
