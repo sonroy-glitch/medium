@@ -41,6 +41,7 @@ const Update = () => {
       if(update.status===200){
         setHolder("Blog Updated")
         setBlog(update.data)
+        localStorage.setItem("blog",JSON.stringify(update.data))
      ref.current.complete()
         
        navigate("/user/api/blog")
