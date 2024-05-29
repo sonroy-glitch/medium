@@ -31,7 +31,7 @@ const Bookmark = () => {
   useEffect(() => {
     async function call(){
       ref.current.continuousStart()
-      var data = await axios.get("http://localhost:8787/user/api/bookmarks",{
+      var data = await axios.get("https://medium.rsounak55.workers.dev/user/api/bookmarks",{
       headers:{auth:token}
     })
     setBookmark(data.data)

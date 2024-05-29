@@ -31,7 +31,7 @@ const Update = () => {
    }, [])
   async function run (){
      ref.current.continuousStart()
-      var update = await axios.put("http://localhost:8787/user/api/update",{
+      var update = await axios.put("https://medium.rsounak55.workers.dev/user/api/update",{
         id,
         title:title,
         description:description,

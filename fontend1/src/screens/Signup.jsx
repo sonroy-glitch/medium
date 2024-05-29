@@ -57,7 +57,7 @@ const Signup = () => {
      }
      else{
       try{
-        var data = await axios.post("http://localhost:8787/user/signup",{
+        var data = await axios.post("https://medium.rsounak55.workers.dev/user/signup",{
           name,
           email,
           password

@@ -38,7 +38,7 @@ const Write = () => {
 
     }
     else{
-      var add = await axios.post("http://localhost:8787/user/api/post",{
+      var add = await axios.post("https://medium.rsounak55.workers.dev/user/api/post",{
         title:title,
         description:description,
       },{

@@ -32,7 +32,7 @@ const EachBlog = () => {
   var token= localStorage.getItem("auth")
   useEffect(() => {
     async function call(){
-      var data1 = await axios.get("http://localhost:8787/user/api/check",{
+      var data1 = await axios.get("https://medium.rsounak55.workers.dev/user/api/check",{
         headers:{auth:token}
       })
       
@@ -45,7 +45,7 @@ const EachBlog = () => {
   
   async function run (){
  
-     var data=await axios.get("http://localhost:8787/user/api/claps",{
+     var data=await axios.get("https://medium.rsounak55.workers.dev/user/api/claps",{
       headers:{
         auth:token,
         id
@@ -66,7 +66,7 @@ const EachBlog = () => {
   
   async function bookmarkAdd(){
     if(bookmarkIcon===bookmarkfalse){
-      var data = await axios.post("http://localhost:8787/user/api/bookmarks",{
+      var data = await axios.post("https://medium.rsounak55.workers.dev/api/bookmarks",{
         id
       },{
         headers:{auth:token}
@@ -74,7 +74,7 @@ const EachBlog = () => {
       setBookmarkIcon(bookmarktrue) 
     }
     else if(bookmarkIcon===bookmarktrue){
-     var data = await axios.get("http://localhost:8787/user/api/bookmarks/delete",{
+     var data = await axios.get("https://medium.rsounak55.workers.dev/bookmarks/delete",{
       headers:{auth:token,
         id
       }
@@ -89,7 +89,7 @@ const EachBlog = () => {
   }
   async function deleteBlogs(){
     ref.current.continuousStart()
-    var data =await axios.post("http://localhost:8787/user/api/delete",{
+    var data =await axios.post("https://medium.rsounak55.workers.dev/user/api/delete",{
       id
     },{
       headers:{auth:token}

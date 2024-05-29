@@ -24,9 +24,9 @@ const Blogs = () => {
     var token=localStorage.getItem("auth")
     async function call(){
       ref.current.continuousStart()
-    var data = await axios.post("http://localhost:8787/user/fetch/all")
+    var data = await axios.post("https://medium.rsounak55.workers.dev/user/fetch/all")
       if(token!==null){
-        var data1 = await axios.get("http://localhost:8787/user/api/name",{
+        var data1 = await axios.get("https://medium.rsounak55.workers.dev/user/api/name",{
           headers:{auth:token}
         })
         setName(data1.data)
@@ -43,7 +43,7 @@ const Blogs = () => {
     var token= localStorage.getItem("auth");
     if(token!==null){
       async function call(){
-       var data = await axios.get("http://localhost:8787/user/validation", {
+       var data = await axios.get("https://medium.rsounak55.workers.dev/user/validation", {
         headers: { auth: token },
       })
       if(data.status===200){

@@ -22,23 +22,7 @@ const Signin = () => {
     setMessage("")
   }, 10000);
   }, [message])
-  //signin direct token
-  // useEffect(()=>{
-  //   var token = localStorage.getItem("auth");
-  //   if(token!==null){
-  //     async function call(){
-  //       var data= await axios.get("http://localhost:8787/user/validation",
-  //        { headers:{auth:token}}
-  //       )
-  //       console.log("hi")
-  //       if(data.status===202){
-  //         navigate("/user/blogs")
-  //       }
-  //      }
-  //      call();
-  //   }
-   
-  // },[])
+
   
   function emailDebounced(e){
     clearTimeout(timeoutCounter)
@@ -65,7 +49,7 @@ const Signin = () => {
 
     }
     else{
-      var data = await axios.post("http://localhost:8787/user/signin",{
+      var data = await axios.post("https://medium.rsounak55.workers.dev/user/signin",{
         email,
         password
       })

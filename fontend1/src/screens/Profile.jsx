@@ -30,7 +30,7 @@ const Profile = () => {
   useEffect(() => {
     async function call() {
       ref.current.continuousStart()
-      var data = await axios.get("http://localhost:8787/user/api/fetch", {
+      var data = await axios.get("https://medium.rsounak55.workers.dev/user/api/fetch", {
         headers: { auth: token },
       });
       setUserBlog(data.data);
@@ -41,7 +41,7 @@ const Profile = () => {
   }, []);
   useEffect(() => {
     async function call() {
-      var data =await axios.get("http://localhost:8787/user/api/about",{
+      var data =await axios.get("https://medium.rsounak55.workers.dev/user/api/about",{
         headers:{auth:token}
       })
       setAboutData(data.data)
@@ -62,7 +62,7 @@ const Profile = () => {
     setAboutHolder(aboutData)
   }
 
-  var data = await axios.post("http://localhost:8787/user/api/about",{
+  var data = await axios.post("https://medium.rsounak55.workers.dev/user/api/about",{
     about:aboutHolder
   },{
     headers:{auth:token}

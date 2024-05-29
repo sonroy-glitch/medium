@@ -14,7 +14,7 @@ const Home = () => {
 
     var token = localStorage.getItem("auth");
     if (token !== null) {
-      var data = await axios.get("http://localhost:8787/user/validation", {
+      var data = await axios.get("https://medium.rsounak55.workers.dev/user/validation", {
         headers: { auth: token },
       });
       if (data.status === 200) {
