@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "@prisma/extension-accelerate": "^1.0.0",
+    "@sr1435/common": "^1.0.0",
+    "@sr1435/common-medium": "^1.0.0",
+    "@sr1435/common-medium-app": "^1.0.0",
+    "@sr1435/common-medium-update": "^1.0.0",
+    "@tsndr/cloudflare-worker-jwt": "^2.5.3",
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "hono": "^4.3.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240403.0",
+    "prisma": "^5.14.0",
+    "wrangler": "^3.47.0"
+  }
+}

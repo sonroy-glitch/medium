@@ -1,0 +1,27 @@
+.description-wrap{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    font-size:8px
+}
+.size{
+    font-size: 10px;
+}
+.size1{
+    font-size: 8px;
+}
+.size2{
+    font-size: 9px;
+}
+.size3{
+    font-size: 8px;
+}
+.size4{
+    font-size:7px;
+}
+.size5{
+    font-size: 10px;
+}
