@@ -47,7 +47,7 @@ const Write = () => {
       if(add.status===200){
         setHolder("Blog added")
         setBlog(add.data)
-        localStorage.setItem("blog",JSON.stringify(update.data))
+        localStorage.setItem("blog",JSON.stringify(add.data))
     ref.current.complete()
 
        navigate("/user/api/blog")
