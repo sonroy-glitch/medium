@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import LoadingBar from "react-top-loading-bar";
-import {signinChecker} from "../state/atoms/signinChecker.tsx"
+import {signinChecker} from "../state/atoms/signinChecker.jsx"
 import {useRecoilState} from "recoil"
 const Home = () => {
   const navigate = useNavigate();

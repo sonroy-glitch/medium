@@ -1,8 +1,8 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom"
-import {profileDiv} from "../state/atoms/profileDiv.tsx"
+import {profileDiv} from "../state/atoms/profileDiv.jsx"
 import {useRecoilState,useSetRecoilState} from "recoil"
-import {signinChecker} from "../state/atoms/signinChecker.tsx"
+import {signinChecker} from "../state/atoms/signinChecker.jsx"
 
 import "./profile.css"
 const ProfileContainer = () => {

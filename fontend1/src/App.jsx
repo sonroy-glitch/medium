@@ -1,17 +1,15 @@
 import { useState ,Suspense} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Write from "./screens/Write.tsx"
-import Signin from "./screens/Signin.tsx"
-import Signup from "./screens/Signup.tsx"
-import Blogs from "./screens/Blogs.tsx"
-import Home from "./screens/Home.tsx"
-import NotFound from "./screens/NotFound.tsx"
-import EachBlog from "./screens/EachBlog.tsx"
-import Profile from "./screens/Profile.tsx"
-import Bookmark from "./screens/Bookmark.tsx"
-import Update from "./screens/Update.tsx"
+import Write from "./screens/Write.jsx"
+import Signin from "./screens/Signin.jsx"
+import Signup from "./screens/Signup.jsx"
+import Blogs from "./screens/Blogs.jsx"
+import Home from "./screens/Home.jsx"
+import NotFound from "./screens/NotFound.jsx"
+import EachBlog from "./screens/EachBlog.jsx"
+import Profile from "./screens/Profile.jsx"
+import Bookmark from "./screens/Bookmark.jsx"
+import Update from "./screens/Update.jsx"
 import {Routes,Route} from "react-router-dom"
 function App() {
   const [count, setCount] = useState(0)

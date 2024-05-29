@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import { signinChecker } from "../state/atoms/signinChecker.tsx";
+import { signinChecker } from "../state/atoms/signinChecker.jsx";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { blogsHolder } from "../state/atoms/blogsHolder.tsx";
+import { blogsHolder } from "../state/atoms/blogsHolder.jsx";
 import LoadingBar from "react-top-loading-bar";
 import { useNavigate } from "react-router-dom";
-import { profileDiv } from "../state/atoms/profileDiv.tsx";
-import { singleBlog } from "../state/atoms/singleBlog.tsx";
-import { userName } from "../state/atoms/userName.tsx";
-import { privateBlog } from "../state/atoms/privateBlog.tsx";
+import { profileDiv } from "../state/atoms/profileDiv.jsx";
+import { singleBlog } from "../state/atoms/singleBlog.jsx";
+import { userName } from "../state/atoms/userName.jsx";
+import { privateBlog } from "../state/atoms/privateBlog.jsx";
 
-import ProfileContainer from "../components/ProfileContainer.tsx";
+import ProfileContainer from "../components/ProfileContainer.jsx";
 import "./blogs.css";
 const Profile = () => {
   const signedIn = useRecoilValue(signinChecker);

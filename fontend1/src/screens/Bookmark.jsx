@@ -1,12 +1,12 @@
 import React,{useState,useEffect,useRef} from 'react'
-import {userName} from "../state/atoms/userName.tsx"
+import {userName} from "../state/atoms/userName.jsx"
 import {useRecoilValue} from "recoil"
-import {profileDiv} from "../state/atoms/profileDiv.tsx"
+import {profileDiv} from "../state/atoms/profileDiv.jsx"
 import {useRecoilState} from "recoil"
 import axios from "axios"
 import {postSchema} from "@sr1435/common-medium-app"
-import {singleBlog} from "../state/atoms/singleBlog.tsx"
-import ProfileContainer from "../components/ProfileContainer.tsx"
+import {singleBlog} from "../state/atoms/singleBlog.jsx"
+import ProfileContainer from "../components/ProfileContainer.jsx"
 import {useNavigate} from "react-router-dom"
 import LoadingBar from "react-top-loading-bar"
 

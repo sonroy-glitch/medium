@@ -1,14 +1,14 @@
 import React,{useState,useEffect,useRef} from 'react'
-import {userName} from "../state/atoms/userName.tsx"
+import {userName} from "../state/atoms/userName.jsx"
 import {useRecoilValue} from "recoil"
-import {profileDiv} from "../state/atoms/profileDiv.tsx"
+import {profileDiv} from "../state/atoms/profileDiv.jsx"
 import {useRecoilState} from "recoil"
 import axios from "axios"
 import LoadingBar from "react-top-loading-bar"
 import {updateSchema} from "@sr1435/common-medium-app"
-import {updateHolder} from "../state/atoms/updateHolder.tsx"
-import {singleBlog} from "../state/atoms/singleBlog.tsx"
-import ProfileContainer from "../components/ProfileContainer.tsx"
+import {updateHolder} from "../state/atoms/updateHolder.jsx"
+import {singleBlog} from "../state/atoms/singleBlog.jsx"
+import ProfileContainer from "../components/ProfileContainer.jsx"
 import {useNavigate} from "react-router-dom"
 //before sending the decription be sure to add / before the " for the string obtained
 //also do a json stringfy to compensate the gaps

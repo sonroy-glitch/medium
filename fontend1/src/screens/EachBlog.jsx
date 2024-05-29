@@ -1,19 +1,19 @@
 import React,{useState,useEffect,useRef} from 'react'
-import {singleBlog} from "../state/atoms/singleBlog.tsx"
-import {blogsHolder} from "../state/atoms/blogsHolder.tsx"
-import {profileDiv} from "../state/atoms/profileDiv.tsx"
-import {userName} from "../state/atoms/userName.tsx"
+import {singleBlog} from "../state/atoms/singleBlog.jsx"
+import {blogsHolder} from "../state/atoms/blogsHolder.jsx"
+import {profileDiv} from "../state/atoms/profileDiv.jsx"
+import {userName} from "../state/atoms/userName.jsx"
 import "./blogs.css"
 import LoadingBar from "react-top-loading-bar"
 import clap from "../assets/clap.svg"
 import update from "../assets/update.svg"
 import deleteBlog from "../assets/delete.svg"
-import ProfileContainer from "../components/ProfileContainer.tsx"
+import ProfileContainer from "../components/ProfileContainer.jsx"
 import bookmarktrue from "../assets/bookmarktrue.svg"
 import bookmarkfalse from "../assets/bookmarkfalse.svg"
 import {useNavigate} from 'react-router-dom'
 import {useRecoilState,useRecoilValue,useSetRecoilState} from "recoil"
-import {updateHolder} from "../state/atoms/updateHolder.tsx"
+import {updateHolder} from "../state/atoms/updateHolder.jsx"
 import axios from "axios"
 const EachBlog = () => {
   const [blog,setBlog]=useRecoilState(singleBlog)

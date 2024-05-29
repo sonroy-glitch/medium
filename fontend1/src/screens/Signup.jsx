@@ -4,7 +4,7 @@ import LoadingBar from "react-top-loading-bar"
 import axios from "axios";
 import { useRecoilState } from "recoil";
 import {useNavigate} from "react-router-dom"
-import {signinChecker} from "../state/atoms/signinChecker.tsx"
+import {signinChecker} from "../state/atoms/signinChecker.jsx"
 
 const Signup = () => {
   var timeoutClock1, timeoutClock2, timeoutClock3;
